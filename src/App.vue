@@ -3,11 +3,22 @@
 </template>
 
 <script>
+import { getAllChannelsAPI } from '@/api'
+// try+catch 来捕获await同步代码的错误
 export default {
   async created () {
-    const res = await new Promise()
-    console.log(res)
+    try {
+      const res = await getAllChannelsAPI()
+      console.log(res)
+    } catch (err) {
+    // err参数拿到的就是错误对象
+      // console.log(err)
+      // 给用户来个弹窗提示 - 程序出错了
+      // console.dir() 详细打印
+      console.dir(err)
+    }
   }
+
 }
 </script>
 
