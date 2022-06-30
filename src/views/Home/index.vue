@@ -1,10 +1,15 @@
 <template>
   <div>
-    首页
+    <div>
+      <van-nav-bar
+
+      />
+    </div>
   </div>
 </template>
 
 <script>
+
 export default {
 
 }
